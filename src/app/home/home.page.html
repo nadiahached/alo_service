@@ -1,0 +1,40 @@
+
+
+<ion-content adding class="background">
+  <div>
+    <ion-buttons  slot="start" style="position: relative;top:18px;left:20px;color: #FDDB04">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+
+  </div>
+  <ion-card class="welcome-card">
+    <img src="/assets/shapes.png" alt=""/>
+    <ion-card-header text-center>
+      <ion-card-subtitle [ngStyle]="{color:'white'}">Welcome to Allo service!</ion-card-subtitle>
+      <ion-card-title  [ngStyle]="{color:'white'}">Get Started</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list lines="none" >
+    <ion-list-header>
+      <ion-label [ngStyle]="{color:'white'}">Services</ion-label>
+    </ion-list-header>
+
+    <ion-item (click)="Choose_service('Gardening')" color="#000000">
+      <ion-icon slot="start" style="color: #FDDB04" name="flower"></ion-icon>
+      <ion-label [ngStyle]="{color:'white'}">Gardening</ion-label>
+    </ion-item>
+    <ion-item (click)="Choose_service('Plumbing')"color="#000000">
+      <ion-icon slot="start"  style="color: #FDDB04" name="umbrella"></ion-icon>
+      <ion-label [ngStyle]="{color:'white'}">Plumbing</ion-label>
+    </ion-item>
+    <ion-item (click)="Choose_service('Electricity')"color="#000000">
+      <ion-icon slot="start"  style="color: #FDDB04" name="flash"></ion-icon>
+      <ion-label [ngStyle]="{color:'white'}">Electricity</ion-label>
+    </ion-item>
+    <ion-item (click)="Choose_service('Building')"color="#000000">
+      <ion-icon slot="start"  style="color: #FDDB04" name="home"></ion-icon>
+      <ion-label [ngStyle]="{color:'white'}">Building</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

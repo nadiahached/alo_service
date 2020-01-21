@@ -1,0 +1,7 @@
+{
+  "name": "alo_serbice",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

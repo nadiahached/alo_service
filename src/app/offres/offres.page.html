@@ -1,0 +1,54 @@
+<ion-content adding class="background">
+    <div>
+        <ion-buttons  slot="start" style="position: relative;top:18px;left:20px;color: #FDDB04">
+            <ion-menu-button ></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons class="posi-add">
+            <ion-icon name="add-circle-outline"  style="color: #FDDB04;height: 26px;width: 26px ;top:18px;left:80px;"
+                      (click)="onNewOffer()"></ion-icon>
+        </ion-buttons>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 text-center [ngStyle]="{color:'white'}">{{Service}}</h2>
+                      <div  *ngFor="let offer of this.Offers">
+                           <ion-card  style="background: #ffffff;">
+                              <h3 class="parag" style="position: relative;"> Description: {{offer.description}} </h3>
+                              <h3 class="parag" style="position: relative;">Price: {{offer.price}} </h3>
+                              <h3 class="parag" style="position: relative">PhoneNumber: {{offer.phone_number}}  </h3>
+
+                            </ion-card >
+                          <ion-card>
+                            <ion-segment scrollable  >
+
+                                <ion-card style="background: #ffffff;">
+                                    <ion-segment-button>
+                                    <ion-icon style="color: greenyellow" name="call" (click)="onCallNumber(offer.phone_number)" >
+
+                                    </ion-icon>
+                                  </ion-segment-button>
+                                </ion-card>
+                                <ion-card  style="background: #ffffff;">
+
+                                  <ion-segment-button checked (click)="onVeiwDetails(offer)">
+                                    <ion-icon style="color: #0bb8cc" name="pin"></ion-icon>
+                                  </ion-segment-button>
+                                </ion-card>
+                                <ion-card  style="background: #ffffff;">
+                                    <ion-segment-button checked  (click)="onRemoveOffer(offer)">
+                                    <ion-icon  color="danger" name="close-circle"></ion-icon>
+                                  </ion-segment-button>
+                                </ion-card>
+
+                            </ion-segment>
+                          </ion-card>
+                        </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
+

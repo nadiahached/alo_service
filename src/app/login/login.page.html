@@ -1,0 +1,43 @@
+<ion-content adding class="background">
+  <ion-img style="position: relative;top: 10px;" src="/assets/logo.png"></ion-img>
+
+<form style="position: relative; top: 15px" [formGroup]="userForm"  (ngSubmit)="login()">
+    <ion-card>
+
+      <ion-item >
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+                type="text"
+                formControlName="email"
+                name="email"
+                id="email" ></ion-input>
+      </ion-item>
+
+      <ion-item  class="form-group" >
+        <ion-label position="floating" >Password</ion-label>
+        <ion-input
+                type="password"
+                formControlName="password"
+                class="form-control"
+                id="password" ></ion-input>
+      </ion-item>
+
+      <ion-button color="dark" type="submit" expand="full" >
+        <div [ngStyle]="{color:'#FDDB04'}">Login</div>
+      </ion-button>
+
+      <div *ngIf="errorMessage" color="danger" class="ion-align-items-center">
+        <button color="'danger"> {{this.errorMessage}}</button>
+      </div>
+    </ion-card>
+  </form>
+  <ion-card style="position: relative; top: 10px">
+    <p text-center [ngStyle]="{color:'primary'}">Don't have a account?</p>
+    <ion-button expand="full" color="dark" (click)="Register()">
+      <div  [ngStyle]="{color:'greenyellow'}">Register</div>
+
+    </ion-button>
+  </ion-card>
+
+
+</ion-content>

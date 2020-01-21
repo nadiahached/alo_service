@@ -1,0 +1,13 @@
+.welcome-card img {
+  max-height: 45vh;
+  overflow: hidden;
+}
+
+ion-content.background{
+  --background: url(../../assets/black.jpg) 0 0/100% 100% no-repeat;
+}
+ion-list{
+  background-color: #000000 !important;
+  color: #000000;
+}
+

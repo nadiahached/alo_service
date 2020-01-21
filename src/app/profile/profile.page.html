@@ -1,0 +1,57 @@
+<ion-content adding class="background">
+
+  <div>
+    <ion-buttons  slot="start" style="position: relative;top:18px;left:20px;color: #FDDB04">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+
+  </div>
+  <ion-content  padding class="background">
+
+
+    <div  padding-top style="position: relative; top:20px">
+
+      <ion-avatar class="user-photo">
+        <img [src]="'/assets/profil.jpg'">
+      </ion-avatar>
+    </div>
+
+    <ion-card style="position: relative; top:50px">
+      <ion-item>
+        <ion-icon style="color: #FDDB04" name="person" slot="start"></ion-icon>
+        <ion-label>
+          <p class="parag">Name</p>
+          <h2 class="h2style">{{user.userName}}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: relative; top: 70px">
+      <ion-item>
+        <ion-icon style="color: #FDDB04" name="mail" slot="start"></ion-icon>
+        <ion-label>
+          <p class="parag">Email</p>
+          <h2 class="h2style">{{user.email}}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: relative; top: 90px">
+      <ion-item>
+        <ion-icon style="color: #FDDB04" name="pulse" slot="start"></ion-icon>
+        <ion-label>
+          <p class="parag">BirthDay</p>
+          <h2 class="h2style">{{user.brithday.substring(0,10)}}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: relative; top: 110px">
+      <ion-item>
+        <ion-icon  style="color: #FDDB04" slot="start" name="log-out"></ion-icon>
+        <ion-label>
+          <p class="parag">LogOut</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-content>
+
+</ion-content>
+

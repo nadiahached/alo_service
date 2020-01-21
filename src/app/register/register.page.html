@@ -1,0 +1,67 @@
+<ion-content adding class="background">
+  <ion-img style="position: relative;top: 10px;" src="/assets/logo.png"></ion-img>
+
+  <ion-card  style="position: relative; top: 15px">
+    <form [formGroup]="userFrom"  (ngSubmit)="register()">
+
+      <ion-item >
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+                type="text"
+                formControlName="email"
+                name="email"
+                id="email" ></ion-input>
+      </ion-item>
+
+      <ion-item  class="form-group" >
+        <ion-label position="floating" >Password</ion-label>
+        <ion-input
+                type="password"
+                formControlName="password"
+                class="form-control"
+                id="password" ></ion-input>
+      </ion-item>
+
+      <ion-item  class="form-group" >
+        <ion-label position="floating" >UserName</ion-label>
+        <ion-input type="text"
+                   formControlName="UserName"
+                   id="UserName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">BirthDay</ion-label>
+        <ion-datetime value="1990-02-19"
+                      placeholder="Select Date"
+                      id="BirthDay"
+                      formControlName="BirthDay"></ion-datetime>
+      </ion-item>
+
+      <ion-item  class="form-group" >
+        <ion-label position="floating">PhoneNumber</ion-label>
+        <ion-input type="text"
+                   formControlName="PhoneNumber"
+                   pickerFormat="DD-MMMM-YYYY "
+                   id="PhoneNumber"></ion-input>
+      </ion-item>
+
+
+      <ion-button type="submit" expand="full" color="dark">
+        <div [ngStyle]="{color:'#FDDB04'}">Register</div>
+      </ion-button>
+      <div *ngIf="errorMessage" color="danger" class="ion-align-items-center">
+        <button color="'danger"> {{this.errorMessage}}</button>
+      </div>
+    </form>
+
+  </ion-card >
+
+  <ion-card style="position: relative; top: 10px">
+    <form>
+      <ion-button type="submit" expand="full" color="dark" (click)="login()">
+        <div [ngStyle]="{color:'#FDDB04'}">Login</div>
+      </ion-button>
+    </form>
+  </ion-card>
+</ion-content>
+
